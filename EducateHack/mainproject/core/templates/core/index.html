@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Main Page
+{% endblock %}
+{% block content %}
+<div class="bg-[#7f849c] rounded-lg">
+    <h1 class="text-6xl text-center text-[#f0c6c6] font-semibold"> Enter Previous Courses <h1>  
+    <p class="font-semibold px-6 py-6">  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim sint harum reiciendis aliquam nesciunt a fugit rem nobis autem saepe tempore temporibus distinctio sunt, quos illum, odio suscipit velit aperiam? </p>   
+    <div class="px-6 py-6 text-[#585b70]" >
+    <label for="major-select" class="text-[#eba0ac] text-2xl">Select a major:</label>
+    <select id="major-select" class="rounded-lg bg-[#181825]" >
+    <option value="">--Please choose an option--</option>
+    <optgroup label="Arts and Humanities">
+        <option value="Art History">Art History</option>
+        <option value="Classics">Classics</option>
+        <option value="English">English</option>
+        <option value="History">History</option>
+        <option value="Music">Music</option>
+        <option value="Philosophy">Philosophy</option>
+    </optgroup>
+    <optgroup label="Business and Management">
+        <option value="Accounting">Accounting</option>
+        <option value="Business Administration">Business Administration</option>
+        <option value="Economics">Economics</option>
+        <option value="Finance">Finance</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Supply Chain Management">Supply Chain Management</option>
+    </optgroup>
+    <optgroup label="Engineering and Technology">
+        <option value="Computer Science">Computer Science</option>
+        <option value="Electrical Engineering">Electrical Engineering</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Civil Engineering">Civil Engineering</option>
+        <option value="Chemical Engineering">Chemical Engineering</option>
+        <option value="Aerospace Engineering">Aerospace Engineering</option>
+    </optgroup>
+    <optgroup label="Health Sciences">
+        <option value="Nursing">Nursing</option>
+        <option value="Public Health">Public Health</option>
+        <option value="Kinesiology">Kinesiology</option>
+        <option value="Psychology">Psychology</option>
+        <option value="Pharmacy">Pharmacy</option>
+        <option value="Physical Therapy">Physical Therapy</option>
+    </optgroup>
+    <optgroup label="Science and Mathematics">
+        <option value="Biology">Biology</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Physics">Physics</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Statistics">Statistics</option>
+        <option value="Environmental Science">Environmental Science</option>
+    </optgroup>
+    </select>
+</div>
+
+    
+</div>
+    
+{% endblock %}
