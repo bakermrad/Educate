@@ -4,7 +4,27 @@
 Main Page
 {% endblock %}
 {% block content %}
-    <h1 class="text-xl text-[#f0c6c6] font-semibold"> Main Page <h1>  
-    <p class="font-semibold">  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim sint harum reiciendis aliquam nesciunt a fugit rem nobis autem saepe tempore temporibus distinctio sunt, quos illum, odio suscipit velit aperiam? </p>   
+    <div class="mt-6 px-6 py-12 rounded-xl">
+        <h2 class="mb-12 text-2xl text-center" >Newest Items</h2>
+
+        <div class="grid grid-cols-3 gap" >
+            {% for item in items%}
+            <div>
+                <a href="">
+                    <div>
+                        <img src="{{ item.image.url}}" class="rounded-t-xl" alt="">
+
+                        <div class="p-6 bg-white rounded-b-xl">
+                            <h2 class="text-2xl">{{ item.name }}</h2>
+                            <p> price = {{item.price}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            {% endfor %}
+        </div>
+
+    </div>   
     
 {% endblock %}
