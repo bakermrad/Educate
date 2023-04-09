@@ -8,8 +8,9 @@ Main Page
     <h1 class="text-6xl text-center text-[#f0c6c6] font-semibold"> Enter Previous Courses <h1>  
     <p class="font-semibold px-6 py-6">  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim sint harum reiciendis aliquam nesciunt a fugit rem nobis autem saepe tempore temporibus distinctio sunt, quos illum, odio suscipit velit aperiam? </p>   
     <div class="px-6 py-6 text-[#585b70]" >
-    <label for="major-select" class="text-[#eba0ac] text-2xl">Select a major:</label>
-    <select id="major-select" class="rounded-lg bg-[#181825]" >
+    <label for="major-select" class="text-[#ed8796] text-2xl">Select a major:</label>
+<form action="{% url 'updateindex'%}">
+    <select id="major-select" class=" px-6 py-3 rounded-lg bg-[#181825]" name="SelectedMajor" >
     <option value="">--Please choose an option--</option>
     <optgroup label="Arts and Humanities">
         <option value="Art History">Art History</option>
@@ -52,6 +53,8 @@ Main Page
         <option value="Environmental Science">Environmental Science</option>
     </optgroup>
     </select>
+    <input type="submit" class=" px-5 py-2 text-lg font-semibold bg-[#8bd5ca] text-white rounded-xl hover:text-teal-700" value="submit" >
+</form>
 </div>
 
     

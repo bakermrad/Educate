@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Main Page
+{% endblock %}
+
+
+{% block content %}
+
+    {% for course in Courses %}
+    <h1>just some check for the click submitions: {{SelectedMajor}} {{course.Major}} </h1>
+        {% if course.Major == SelectedMajor %}
+            <h1>{{ course.Major }}</h1>
+        {% endif %}
+    {% endfor %}
+       
+        
+
+{% endblock %}

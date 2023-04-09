@@ -4,6 +4,13 @@ making a env
 ```bash
 py -m venv env
 ```
+activated venv
+```bash
+env\Scripts\activate
+```
+
+
+
 Installing django
 ```bash
 pip install django
