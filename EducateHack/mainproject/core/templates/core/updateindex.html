@@ -4,16 +4,35 @@
 Main Page
 {% endblock %}
 
-
 {% block content %}
 
-    {% for course in Courses %}
-    <h1>just some check for the click submitions: {{SelectedMajor}} {{course.Major}} </h1>
-        {% if course.Major == SelectedMajor %}
-            <h1>{{ course.Major }}</h1>
-        {% endif %}
-    {% endfor %}
-       
-        
+<form method="post">
+{% csrf_token %}
 
+<div class="bg-[#7f849c] rounded-lg">
+    <h1 class="text-6xl text-center text-[#f0c6c6] font-semibold"> Mark completed Courses <h1>  
+    <p class="font-semibold px-6 py-6">  Mark all the courses that you have completed</p>   
+    <div class="px-6 py-6" >
+    <label for="major-select" class="text-[#ed8796] text-2xl">Select a major:</label>
+    {% for course in Courses %}
+    {% if course.Major.name == SelectedMajor %}
+    <label class="flex items-center">
+        <input type="checkbox" name="selected_courses" value="{{ course.name }}"
+          class="h-5 w-5 text-indigo-600 transition duration-150 ease-in-out rounded-md
+                 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700
+                 checked:bg-indigo-600 checked:border-transparent checked:text-white">
+        <span class="ml-2 text-xl text-[#181926]">{{ course.name }}</span>
+      </label>    
+    {% endif %}
+    
+{% endfor %}
+<input type="submit" class=" px-5 py-2 text-lg font-semibold bg-[#8bd5ca] text-white rounded-xl hover:text-teal-700" value="submit" >
+
+</div>
+
+    
+</div>
+
+</form>
+    
 {% endblock %}
