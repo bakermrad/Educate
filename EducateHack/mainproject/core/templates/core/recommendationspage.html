@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Main Page
+{% endblock %}
+
+{% block content %}
+
+<div class="bg-[#7f849c] rounded-lg">
+
+<center>
+
+{% if selected_courses %}
+  <h1 class="text-2xl  text-[#ef9f76]"  >You selected the following courses:</h1>
+  <ul>
+    {% for course in selected_courses %}
+    <li>{{ course }}</li> 
+    {% endfor %}
+  </ul>
+
+  <h1 class="text-2xl py-6  text-[#ef9f76]">Courses left:</h1>
+
+  <div class="px-3 py-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {% for course in Courses %}
+
+      {% if course.name not in selected_courses%}
+      <div class="bg-[#232634] rounded-lg shadow-md ">
+        <h2 class="text-xl font-semibold text-[#f4b8e4] py-4">{{ course.name }}</h2>
+        <p class="text-lg text-[#ea999c] py-2">{{ course.start_time }} --> {{ course.end_time }}</p>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+{% else %}
+  <h1>No courses selected</h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {% for course in Courses %}
+
+      {% if course.name not in selected_courses %}
+      <div class="bg-[#232634] rounded-lg shadow-md ">
+        <h2 class="text-xl font-semibold text-[#f4b8e4] py-4">{{ course.name }}</h2>
+        <p class="text-lg text-[#ea999c] py-2">{{ course.start_time }} --> {{ course.end_time }}</p>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+</center>
+
+</div>
+
+
+{% endblock %}

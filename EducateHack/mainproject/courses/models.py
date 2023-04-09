@@ -37,6 +37,7 @@ class Course(models.Model):
     
     class Meta:
         unique_together = ('name', 'day', 'start_time', 'end_time')
+        ordering = ('start_time' , )
 
     def __str__(self):
         return self.name

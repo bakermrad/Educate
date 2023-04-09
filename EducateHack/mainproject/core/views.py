@@ -18,3 +18,15 @@ def updateindex(request):
                    'Majors': Majors,
                    'Courses': Courses
                    })
+
+
+
+def recommendationspage(request):
+    Majors = Major.objects.all()
+    Courses = Course.objects.all()
+    selected_courses = request.POST.getlist('selected_courses')
+    return render(request, "core/recommendationspage.html",
+                  {'selected_courses': selected_courses,
+                   'Majors': Majors,
+                   'Courses': Courses,
+                   })

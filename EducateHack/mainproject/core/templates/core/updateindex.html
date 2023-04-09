@@ -6,7 +6,7 @@ Main Page
 
 {% block content %}
 
-<form method="post">
+<form method="POST" action="{% url 'recommendationspage' %}">
 {% csrf_token %}
 
 <div class="bg-[#7f849c] rounded-lg">

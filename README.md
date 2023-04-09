@@ -1,5 +1,11 @@
 ## install
 
+go to the project file
+
+```bash
+cd EducateHack
+```
+
 making a env
 ```bash
 py -m venv env
@@ -10,7 +16,7 @@ pip install django
 ```
 Entering the project folder
 ```bash
-cd educate
+cd mainproject
 ```
 
 Running python server
