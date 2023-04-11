@@ -3,7 +3,7 @@
 go to the project file
 
 ```bash
-cd EducateHack
+cd Project
 ```
 
 making a env
